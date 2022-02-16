@@ -4,8 +4,11 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 
 mysql.createConnection({
-
-})
+ "host": "hdhdh",
+ "user": "dgdgdg",
+ "port": "fgfgfg",
+ "database": "dghjgffgd"
+});
 
 
 app.get("/",function(req,res){
