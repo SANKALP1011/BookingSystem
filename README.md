@@ -9,7 +9,7 @@
 - Node , express
 
 # Database 
-- Sql
+- MySql
 
 # Deployment 
 - Frontend -: Vercel/Netlify
