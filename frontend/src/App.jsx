@@ -1,8 +1,10 @@
 import React from "react";
+import Main from "./Pages/Main";
 
 function App() {
   return <>
-    <h1>frontend working</h1>
+   <Main />
+
   </>
 }
 

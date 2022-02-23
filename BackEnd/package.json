@@ -9,6 +9,7 @@
   "author": "Sankalp",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "mysql": "^2.18.1"
   }
