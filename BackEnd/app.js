@@ -3,12 +3,22 @@ const mysql = require("mysql");
 const app = express();
 app.use(express.urlencoded({extended: true}));
 
-mysql.createConnection({
- "host": "hdhdh",
- "user": "dgdgdg",
- "port": "fgfgfg",
- "database": "dghjgffgd"
+var coonection =  mysql.createConnection({
+ "host": "127.0.0.1",
+ "user": "root",
+ "port": "3306",
+ "database": "Bookingdb",
+ "password": "mysqldatabase"
 });
+
+coonection.connect(function(err,result){
+  if (err){
+    console.log(err)
+  }
+  else{
+    console.log("Database connected")
+  }
+})
 
 
 app.get("/",function(req,res){
