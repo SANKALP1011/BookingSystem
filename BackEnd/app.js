@@ -3,7 +3,6 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
-app.use(cors);
 app.use(express.urlencoded({extended: true}));
 app.use(express.json);
 var coonection =  mysql.createConnection({
@@ -22,13 +21,16 @@ coonection.connect(function(err,result){
     console.log("Database connected")
   }
 })
-
+ 
+app.get("/",function(req,res){
+  res.send("Backend side")
+})
 
 app.post("/",function(req,res){
-    const DemoName = req.body.DemoName;
-    console.log(DemoName);
+    const Demo = req.params.DemoName;
+    console.log(Demo);
     const query = "INSERT INTO Demo (DemoName) VALUES (?)";
-    coonection.query(query,[DemoName],function(err,result){
+    coonection.query(query,[Demo],function(err,result){
       if(err){
         console.log(err);
       }

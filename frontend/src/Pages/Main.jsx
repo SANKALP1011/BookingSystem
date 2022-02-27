@@ -10,7 +10,7 @@ export const Main = () =>{
             DemoName: DemoName
         })
         .then(() =>{
-            alert("Added");
+            console.log("added");
         });
 
     }
