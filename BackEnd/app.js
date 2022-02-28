@@ -26,7 +26,7 @@ app.get("/",function(req,res){
   res.send("Backend side")
 })
 
-app.post("/",function(req,res){
+app.post("/api",function(req,res){
     const Demo = req.params.DemoName;
     console.log(Demo);
     const query = "INSERT INTO Demo (DemoName) VALUES (?)";
