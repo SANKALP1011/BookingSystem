@@ -16,7 +16,7 @@ export const Main = () =>{
     }
   return <>
          
-         <input type="text" name="DemoName" onChange={(e) =>{
+         <input type="text" name="DemoName" value={DemoName} onChange={(e) =>{
              setDemoName(e.target.value);
          }} />
          <button type="submit" onClick={TestFunction}>ADD</button>
