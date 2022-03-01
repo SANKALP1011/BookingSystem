@@ -25,8 +25,8 @@ export const LogIn = () =>{
 
  return <>
 <div className="form">
-      <input type="text" placeholder="your email..." name="email" />
-      <input type="text" placeholder="your pass" name="password" />
+      <input type="text" placeholder="your email..." name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input type="text" placeholder="your pass" name="password" value={passord} onChange={(e) => setPassord(e.target.value)}/>
 
       <button type="submit" onClick={UserLogIn}>Log In</button>
   </div>
