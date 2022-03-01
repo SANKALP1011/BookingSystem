@@ -6,12 +6,15 @@ export const Main = () =>{
 
     const [DemoName , setDemoName] = useState('');
     const TestFunction = () => {
-        Axios.post("http://localhost:3001/",{
+        Axios.post("http://localhost:3001/api",{
             DemoName: DemoName
         })
-        .then(() =>{
-            console.log("added");
-        });
+        .then((response) =>{
+            console.log(response);
+        })
+        .catch(err =>{
+            console.log(err)
+        })
 
     }
   return <>

@@ -27,10 +27,10 @@ app.get("/",function(req,res){
 })
 
 app.post("/api",function(req,res){
-    const Demo = req.params.DemoName;
+    const Demo = req.body.DemoName;
     console.log(Demo);
-    const query = "INSERT INTO Demo (DemoName) VALUES (?)";
-    coonection.query(query,[Demo],function(err,result){
+    const query = "INSERT INTO Demo (DemoName) VALUES '"+Demo+"'";
+    coonection.query(query,function(err,result){
       if(err){
         console.log(err);
       }

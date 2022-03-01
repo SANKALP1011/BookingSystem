@@ -10,13 +10,15 @@ import {firebaseConfig} from "./config/firebase.config";
 function App() {
   initializeApp(firebaseConfig);
   return <>
-    <Router>
+
+  <Main />
+    {/* <Router>
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/LogIn" element={<LogIn />} />
         <Route exact path="/SignIn" element={<SignIn />} />
       </Routes>
-    </Router>
+    </Router> */}
 
   </>
 }
