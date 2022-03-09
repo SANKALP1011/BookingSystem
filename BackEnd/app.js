@@ -1,4 +1,3 @@
-const e = require("express");
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
@@ -30,7 +29,7 @@ app.post("/api",function(req,res){
     const Demo = req.body.DemoName;
     console.log(Demo);
     const query = "INSERT INTO Demo (DemoName) VALUES '"+Demo+"'";
-    coonection.query(query,function(err,result){
+    coonection.query(query  ,function(err,result){
       if(err){
         console.log(err);
       }
