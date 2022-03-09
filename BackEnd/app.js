@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json);
+
 var coonection =  mysql.createConnection({
  "host": "127.0.0.1",
  "user": "root",
