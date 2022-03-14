@@ -5,17 +5,30 @@ import axios from "axios";
 export const Flight = () =>{
    
    const [Flights , setFlights] = useState([]);
-   Axios.get("")
-   .then((response) =>{
-       setFlights(response.data);
-   })
+   const showFlights = () =>{
+    Axios.get("http://localhost:3000/Flights")
+    .then((response) =>{
+      console.log(response);
+      setFlights(response.data);
+    })
+   }
+   
+
+
 
    return <>
+
+   <button onClick={showFlights}>Show flights</button>
    
-   <div className="FlightCard">
+   
+       {Flights.map((val,key)=>{
+           return <div className="FlightCard">
+           
+           <h1>{val.FlightName}</h1>
+           </div>
+       })}
        
-       
-       </div>
+    
 
    </>
 
