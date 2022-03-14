@@ -11,13 +11,15 @@ function App() {
   initializeApp(firebaseConfig);
   return <>
 
-   <Router>
+<Home />
+
+   {/* <Router>
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/LogIn" element={<LogIn />} />
         <Route exact path="/SignIn" element={<SignIn />} />
       </Routes>
-    </Router>
+    </Router> */}
 
   </>
 }
