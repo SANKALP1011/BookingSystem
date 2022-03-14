@@ -1,10 +1,12 @@
 const express = require("express");
 const mysql = require("mysql");
-const cors = require("cors");
-const e = require("express");
+const cors =require("cors");
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json);
+app.use(cors());
+
+const port = "3000"
 
 var coonection =  mysql.createConnection({
  "host": "127.0.0.1",
@@ -23,22 +25,26 @@ coonection.connect(function(err,result){
   }
 })
  
+app.get("/",(req,res)=>{
+  res.sendStatus("BACKEND IS WORKING HERE");
+  console.log("WORKING");
+})
 
-// app.post("/api",function(req,res){
-//     const Demo = req.body.DemoName;
-//     console.log(Demo);
-//     const query = "INSERT INTO Demo (DemoName) VALUES '"+Demo+"'";
-//     coonection.query(query  ,function(err,result){
-//       if(err){
-//         console.log(err);
-//       }
-//       else{
-//         console.log("added");
-//       }
-//     })
-// })
+app.post("/api",(req,res) => {
+    const Demo = req.body.DemoName;
+    console.log(Demo);
+    const query = "INSERT INTO Demo (DemoName) VALUES '"+Demo+"'";
+    coonection.query(query  ,function(err,result){
+      if(err){
+        console.log(err);
+      }
+      else{
+        console.log("added");
+      }
+    })
+})
 
-app.get("/api/Flights",function(req,res){
+app.get("/Flights",(req,res) => {
   const getFlights = "Select* from Flights";
   coonection.query(getFlights,function(err,results){
     if(err){
@@ -49,8 +55,8 @@ app.get("/api/Flights",function(req,res){
       res.send(results);
     }
   })
-})
+});
 
-app.listen("3008",function(){
+app.listen(port,function(){
   console.log("connected");
 })
