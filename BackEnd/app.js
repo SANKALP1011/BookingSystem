@@ -1,6 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const { default: App } = require("../frontend/src/App");
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
@@ -55,6 +56,18 @@ app.get("/Flights",(req,res) => {
     }
   })
 });
+
+app.get("/Cabs",(res,req)=>{
+  const getCabs = "Select * from Cabs";
+  coonection.query(getCabs,function(err,results){
+    if(err){
+      console.log(err)
+    }
+    else{
+      console.log(results)
+    }
+  })
+})
 
 app.listen(port,function(){
   console.log("connected");
