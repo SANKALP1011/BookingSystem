@@ -32,3 +32,14 @@ create table Demo(
  CabCost int,
  CabDest varchar(100)
  );
+
+ insert into Flights
+ values(12121,"QE21C","ON TIME","Indigo",4500,"Chennai"),
+ (11211,"QE21C","ON TIME","Indigo",4500,"Chennai");
+ 
+ select * from Flights;
+ 
+ insert into Cabs
+ values(10211,"OLA","ON TIME","Honda",790,"Lucknow to Kanpur");
+ 
+ select * from Cabs;
