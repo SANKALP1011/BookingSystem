@@ -24,6 +24,7 @@ export const Flight = () =>{
        {Flights.map((val,key)=>{
            return <div className="FlightCard">
            <h1>{val.FlightName}</h1>
+           <h1>{val.FlightStatus}</h1>
            </div>
        })}
        

@@ -56,17 +56,18 @@ app.get("/Flights",(req,res) => {
   })
 });
 
-app.get("/Cabs",(res,req)=>{
-  const getCabs = "Select * from Cabs";
+app.get("/Cabs",(req,res)=>{
+  const getCabs = "Select* from Cabs";
   coonection.query(getCabs,function(err,results){
     if(err){
       console.log(err)
     }
     else{
       console.log(results)
+      res.send(results);
     }
   })
-})
+});
 
 app.listen(port,function(){
   console.log("connected");
