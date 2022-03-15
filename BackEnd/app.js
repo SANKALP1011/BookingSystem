@@ -1,7 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
-const { default: App } = require("../frontend/src/App");
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
