@@ -15,16 +15,14 @@ export const Train = () =>{
  }
 
  return<>
- 
-  <button onClick={getTrains}>Trains</button>
-
-  {trains.map((value,key)=>{
-      return <div>
+ <button onClick={getTrains}>Trains</button>
+  <div className="item-container">
+  {trains.map((value)=>(
+    <div className="card" key={value.CabsCode}>
           <h1>{value.TrainDest}</h1>
       </div>
-  })}
- 
- 
+  ))}
+  </div>
  </>
 
 };
