@@ -69,6 +69,18 @@ app.get("/Cabs",(req,res)=>{
   })
 });
 
+app.get("/Trains",(req,res)=>{
+  const getTrains = "Select* from Trains";
+  coonection.query(getTrains,function(err,results){
+    if (err){
+      console.log(err);
+    }
+    else{
+      res.send(results);
+    }
+  })
+})
+
 app.listen(port,function(){
   console.log("connected");
 })
