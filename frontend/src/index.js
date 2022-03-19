@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Main from "../src/Pages/Main";
+import "../src/Pages/Styles/Card.css";
 
 ReactDOM.render(
   <React.StrictMode>
