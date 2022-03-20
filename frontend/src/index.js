@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Main from "../src/Pages/Main";
-import "../src/Pages/Styles/Card.css";
+import "../src/Styles/Card.css";
+import "../src/Styles/Tailwind.css";
+import "../src/Styles/Index.css";
 
 ReactDOM.render(
   <React.StrictMode>
