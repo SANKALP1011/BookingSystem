@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import axios from "axios";
 
 export const Flight = () =>{
    
