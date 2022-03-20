@@ -13,16 +13,16 @@ import {firebaseConfig} from "./config/firebase.config";
 function App() {
   initializeApp(firebaseConfig);
   return <>
-
-<Cab />
-
-   {/* <Router>
+ <Router>
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/LogIn" element={<LogIn />} />
         <Route exact path="/SignIn" element={<SignIn />} />
+        <Route exact path="/Flight" element={<Flight />}/>
+        <Route exact path="/Cab" element={<Cab />}/>
+        <Route exact path="/Train" element={<Train />}/>
       </Routes>
-    </Router> */}
+    </Router>
 
   </>
 }

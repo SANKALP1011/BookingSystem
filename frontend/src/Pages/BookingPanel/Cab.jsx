@@ -13,7 +13,7 @@ export const Cab = () =>{
          console.log(response)
          console.log(response.data)
         })
-    }
+}
 
     return <>
     

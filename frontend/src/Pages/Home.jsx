@@ -13,6 +13,17 @@ export const Home = () =>{
       <button type="button">Log In</button>
   </NavLink>
 
+  <NavLink exact to='/Flight'>
+      <button type="button">Flight</button>
+  </NavLink>
+
+  <NavLink exact to='/Cab'>
+      <button type="button">Cab</button>
+  </NavLink>
+
+  <NavLink exact to='/Train'>
+      <button type="button">Train</button>
+  </NavLink>
  </>
 
 };
