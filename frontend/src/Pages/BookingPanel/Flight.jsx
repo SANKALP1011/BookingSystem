@@ -19,14 +19,19 @@ export const Flight = () =>{
    return <>
 
    <button onClick={showFlights}>Show flights</button>
-   
-   
-       {Flights.map((val,key)=>{
-           return <div className="FlightCard">
-           <h1>{val.FlightName}</h1>
-           <h1>{val.FlightStatus}</h1>
+   <div className="item-container">
+   {Flights.map((value)=>(
+           <div className="card" key={value.FlightCode}>
+           <h3>{value.FlightName}</h3>
+           <h3>{value.FlightStatus}</h3>
+           <h3>{value.FlightComp}</h3>
+           <h3>{value.FlightCost}</h3>
+           <h3>{value.FlightDest}</h3>
+           <button>Book</button>
            </div>
-       })}
+       ))}
+   </div>
+    
        
     
 
