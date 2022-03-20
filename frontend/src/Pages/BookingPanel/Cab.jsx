@@ -17,17 +17,17 @@ export const Cab = () =>{
 
     return <>
     
-    <button onClick={showCabs}>CABS</button>
+ <button onClick={showCabs}>CABS</button>
    <div className="item-container">
    {Cabs.map((value)=>(
-            <div className="card" key={value.CabsCode}>
+      <div className="card" key={value.CabsCode}>
            <h3>{value.CabName}</h3>
            <h3>{value.CabStatus}</h3>
            <h3>{value.CabComp}</h3>
            <h3>{value.CabCost}</h3>
            <h3>{value.CabDest}</h3>
            <button>Book</button>
-           </div>
+        </div>
        ))}
    </div>
  
