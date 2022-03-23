@@ -7,8 +7,6 @@ import Flight from "./Pages/BookingPanel/Flight";
 import Cab from "./Pages/BookingPanel/Cab";
 import Train from "./Pages/BookingPanel/Train";
 import "../src/Styles/Card.css";
-import "../src/Styles/Index.css";
-import "../src/Styles/Tailwind.css";
 import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import {initializeApp} from "firebase/app";
 import {firebaseConfig} from "./config/firebase.config";
