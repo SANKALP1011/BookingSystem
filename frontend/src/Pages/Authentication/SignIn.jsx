@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import swal from "sweetalert";
 
 
 export const SignIn = () =>{
@@ -13,6 +14,7 @@ export const SignIn = () =>{
         createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        swal("Successfully Signed In", "Thank you for registering with us", "success");
         console.log("Registered user: ", user);
         setEmail("");
         setPassword("");
