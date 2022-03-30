@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { getAuth,   signInWithEmailAndPassword } from "firebase/auth";
-
+import swal from "sweetalert";
 
 
 export const LogIn = () =>{
