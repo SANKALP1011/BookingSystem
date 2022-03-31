@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import swal from "sweetalert";
+import {NavLink} from "react-router-dom";
 
 
 export const SignIn = () =>{
@@ -16,6 +17,7 @@ export const SignIn = () =>{
         const user = userCredential.user;
         swal("Successfully Signed In", "Thank you for registering with us", "success");
         console.log("Registered user: ", user);
+        <NavLink exact to='/Cab' />
         setEmail("");
         setPassword("");
       })
@@ -32,8 +34,9 @@ export const SignIn = () =>{
   <div className="form">
       <input type="text" placeholder="your email..." name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input type="text" placeholder="your pass" name="password"  value={password} onChange={(e) => setPassword(e.target.value)}/>
-
+      <NavLink exact to='/Cab'>
       <button type="submit" onClick={UserSignIn}>Sign In</button>
+      </NavLink>
   </div>
   
   
