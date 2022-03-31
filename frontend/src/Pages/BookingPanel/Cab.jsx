@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
-
+import swal from "sweetalert";
 
 
 
@@ -17,6 +17,10 @@ export const Cab = () =>{
         })
 }
 
+const BookCab = () =>{
+  swal("yES","THIS IS DEMO MESSAGE","error")
+};
+
     return <>
     
  <button onClick={showCabs}>CABS</button>
@@ -28,7 +32,7 @@ export const Cab = () =>{
            <h3>{value.CabComp}</h3>
            <h3>{value.CabCost}</h3>
            <h3>{value.CabDest}</h3>
-           <button>Book</button>
+           <button onClick={BookCab}>Book</button>
         </div>
        ))}
    </div>

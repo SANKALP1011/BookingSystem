@@ -13,7 +13,7 @@ export const SignIn = () =>{
 
     const UserSignIn = () =>{
         createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .await((userCredential) => {
         const user = userCredential.user;
         swal("Successfully Signed In", "Thank you for registering with us", "success");
         console.log("Registered user: ", user);
