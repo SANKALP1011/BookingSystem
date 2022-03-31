@@ -23,6 +23,7 @@ export const SignIn = () =>{
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log("Error ocured: ", errorCode, errorMessage);
+        swal("Oops!", "Please check your password and mail again.", "error");
       });
 
     }

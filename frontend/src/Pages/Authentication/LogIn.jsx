@@ -14,12 +14,14 @@ export const LogIn = () =>{
     signInWithEmailAndPassword(auth, email, passord)
     .then((userCredential) => {
       const user = userCredential.user;
+      swal("Successfully Logged In!", "Thank you for coming back.", "success");
       console.log("Singed in user: ", user);
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log("An error occured: ", errorCode, errorMessage);
+      swal("Oops!", "Please check your password and email again.", "error");
     });
 }
 
