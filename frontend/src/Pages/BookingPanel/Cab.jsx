@@ -26,7 +26,7 @@ const BookCab = () =>{
   swal("YES","THIS IS DEMO MESSAGE","error")
 };
 
-    return <>
+return <>
    <div className="item-container">
    {Cabs.map((value)=>(
       <div className="card" key={value.id}>
@@ -40,9 +40,7 @@ const BookCab = () =>{
         </div>
        ))}
    </div>
- 
-
- </>
+</>
 
 };
 
