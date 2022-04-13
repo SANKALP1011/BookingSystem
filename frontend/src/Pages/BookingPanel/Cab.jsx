@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import swal from "sweetalert";
 
@@ -17,21 +17,24 @@ export const Cab = () =>{
         })
 }
 
+    useEffect(()=>{
+      showCabs()
+    },[]);
+
 const BookCab = () =>{
   swal("yES","THIS IS DEMO MESSAGE","error")
 };
 
     return <>
-    
- <button onClick={showCabs}>CABS</button>
    <div className="item-container">
    {Cabs.map((value)=>(
-      <div className="card" key={value.CabsCode}>
-           <h3>{value.CabName}</h3>
-           <h3>{value.CabStatus}</h3>
-           <h3>{value.CabComp}</h3>
-           <h3>{value.CabCost}</h3>
-           <h3>{value.CabDest}</h3>
+      <div className="card" key={value.id}>
+        <img src={value.image}></img>
+           <h3>{value.title}</h3>
+           <h3>{value.original_title}</h3>
+           <h3>{value.original_title_romanised}</h3>
+           <h3>{value.description}</h3>
+           <h3>{value.director}</h3>
            <button onClick={BookCab}>Book</button>
         </div>
        ))}

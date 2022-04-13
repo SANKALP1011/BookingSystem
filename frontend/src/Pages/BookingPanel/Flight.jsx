@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Axios from "axios";
 
 export const Flight = () =>{
@@ -11,13 +11,16 @@ export const Flight = () =>{
       setFlights(response.data);
     })
    }
+
+   useEffect(()=>{
+     showFlights()
+   },[]);
+
    
 
 
 
    return <>
-
-   <button onClick={showFlights}>Show flights</button>
    <div className="item-container">
    {Flights.map((value)=>(
            <div className="card" key={value.FlightCode}>

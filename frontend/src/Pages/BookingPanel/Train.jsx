@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 
@@ -14,8 +14,11 @@ export const Train = () =>{
      })
  }
 
+ useEffect(()=>{
+     getTrains()
+ },[]);
+
  return<>
- <button onClick={getTrains}>Trains</button>
   <div className="item-container">
   {trains.map((value)=>(
     <div className="card" key={value.TrainCode}>
