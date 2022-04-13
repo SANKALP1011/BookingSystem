@@ -4,6 +4,7 @@ import swal from "sweetalert";
 
 
 
+
 export const Cab = () =>{
 
     const [Cabs,setCabs] = useState([]);
@@ -22,7 +23,7 @@ export const Cab = () =>{
     },[]);
 
 const BookCab = () =>{
-  swal("yES","THIS IS DEMO MESSAGE","error")
+  swal("YES","THIS IS DEMO MESSAGE","error")
 };
 
     return <>
