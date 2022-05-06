@@ -5,6 +5,8 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
+var Flights = require("../BackEnd/Routes/Flight");
+
 const port = "3000"
 
 var coonection =  mysql.createConnection({
@@ -43,18 +45,7 @@ app.post("/api",(req,res) => {
     })
 })
 
-app.get("/Flights",(req,res) => {
-  const getFlights = "Select* from Flights";
-  coonection.query(getFlights,function(err,results){
-    if(err){
-      console.log(err)
-    }
-    else{
-      console.log(results);
-      res.send(results);
-    }
-  })
-});
+app.use('/Flights',Flights);
 
 app.get("/Cabs",(req,res)=>{
   const getCabs = "Select* from Cabs";
