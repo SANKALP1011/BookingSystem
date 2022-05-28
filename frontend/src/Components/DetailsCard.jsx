@@ -2,7 +2,7 @@ import React from "react";
 
 export const DetailsCard = ({id,name,status,company,cost,destination,image}) =>{
   return(
-       <div className="card" key={id}>
+       <div className="card shadow-md" key={id}>
          <img src={image}/>
          <div className="InnerCard">
          <h3>{name}</h3>
