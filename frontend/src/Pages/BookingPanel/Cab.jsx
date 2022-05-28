@@ -17,12 +17,13 @@ export const Cab = () =>{
         })
 }
 
+ 
     useEffect(()=>{
       showCabs()
     },[]);
 
 const BookCab = () =>{
-  swal("YES","THIS IS DEMO MESSAGE","error")
+  alert("hhkhkj")
 };
 
 return <>
@@ -37,8 +38,7 @@ return <>
           cost={value?.CabCost}
           destination={value?.CabDest}
       />
-
-       ))}
+  ))}
    </div>
 </>
 
