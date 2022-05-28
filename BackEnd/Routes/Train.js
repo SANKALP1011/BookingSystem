@@ -1,9 +1,17 @@
 const express = require("express");
-const router = express.Router();
+const DbConnection = require("../DatabaseService/Database")
+const TrainRouter = express.Router();
 
-export const Train = () =>{
-    router.
-    get("",(req,res)=>{
-        
+TrainRouter.
+get("/Trains",(req,res)=>{
+    const getTrains = "Select* from Trains";
+    DbConnection.query(getTrains,function(err,results){
+      if (err){
+        console.log(err);
+      }
+      else{
+        res.send(results);
+      }
     })
-}
+  })
+module.exports = TrainRouter;
