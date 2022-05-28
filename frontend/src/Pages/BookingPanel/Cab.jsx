@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import swal from "sweetalert";
-
+import DetailsCard from "../../Components/DetailsCard";
+import Car from "../../Assets/Car.svg";
 
 export const Cab = () =>{
 
@@ -27,15 +28,16 @@ const BookCab = () =>{
 return <>
    <div className="item-container">
    {Cabs.map((value)=>(
-      <div className="card" key={value.id}>
-        <img src={value.image}></img>
-           <h3>{value.title}</h3>
-           <h3>{value.original_title}</h3>
-           <h3>{value.original_title_romanised}</h3>
-           <h3>{value.description}</h3>
-           <h3>{value.director}</h3>
-           <button onClick={BookCab}>Book</button>
-        </div>
+      <DetailsCard
+          image={Car}
+          key={value?.CabsCode}
+          name={value?.CabName}
+          status={value?.CabStatus}
+          company={value?.CabComp}
+          cost={value?.CabCost}
+          destination={value?.CabDest}
+      />
+
        ))}
    </div>
 </>

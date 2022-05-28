@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import DetailsCard from "../../Components/DetailsCard";
+import TrainImg from "../../Assets/Train.svg";
 
 
 
@@ -21,15 +23,15 @@ export const Train = () =>{
  return<>
   <div className="item-container">
   {trains.map((value)=>(
-    <div className="card" key={value.TrainCode}>
-          <h3>{value.TrainCode}</h3>
-          <h3>{value.TrainName}</h3>
-          <h3>{value.TrainStatus}</h3>
-          <h3>{value.TrainCost}</h3>
-          <h3>{value.TrainDest}</h3>
-          <button>Book</button>
-      </div>
-  ))}
+        <DetailsCard
+            image={TrainImg}
+            key={value?.TrainCode}
+            name={value?.TrainName}
+            status={value?.TrainStatus}
+            cost={value?.TrainCost}
+            destination={value?.TrainDest}
+         />
+ ))}
   </div>
  </>
 
