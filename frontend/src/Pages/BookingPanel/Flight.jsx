@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from "react";
 import Axios from "axios";
+import DetailsCard from "../../Components/DetailsCard";
 
 export const Flight = () =>{
    
@@ -16,27 +17,18 @@ export const Flight = () =>{
      showFlights()
    },[]);
 
-   
-
-
-
-   return <>
-   <div className="item-container">
-   {Flights.map((value)=>(
-           <div className="card" key={value.FlightCode}>
-           <h3>{value.FlightName}</h3>
-           <h3>{value.FlightStatus}</h3>
-           <h3>{value.FlightComp}</h3>
-           <h3>{value.FlightCost}</h3>
-           <h3>{value.FlightDest}</h3>
-           <button>Book</button>
-           </div>
-       ))}
-   </div>
-    
-       
-    
-
+return <>
+   {Flights.map((value)=>{
+       <div className="item-container">
+           <DetailsCard
+             name={value?.FlightName}
+             status={value?.FlightStatus}
+             company={value?.FlightComp}
+             cost={value?.FlightCost}
+             destination={value?.FlightDest}
+              ></DetailsCard>
+       </div>
+            })}
    </>
 
 }
