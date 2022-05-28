@@ -9,12 +9,12 @@
   .card{
     text-align: center;
     padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    padding: 1em;
+    width: 400px;
+    border-radius: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
   }
   img {
-    height: 100px;
-    width: auto;
+    width: 150px;
+    margin: 10% auto;
   }
