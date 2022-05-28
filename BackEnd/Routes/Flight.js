@@ -1,10 +1,11 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const DbConnection = require("../DatabaseService/Database")
+const FlightRouter = express.Router();
 
-const Flights = () =>{
-    app.get("/Flights",(req,res) => {
+    FlightRouter
+     .get("/Flights",(req,res) => {
         const getFlights = "Select* from Flights";
-        coonection.query(getFlights,function(err,results){
+        DbConnection.query(getFlights,function(err,results){
           if(err){
             console.log(err)
           }
@@ -14,8 +15,5 @@ const Flights = () =>{
           }
         })
       });
-}
-
-
-
-  module.exports = Flights;
+      
+module.exports = FlightRouter;

@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import swal from "sweetalert";
-import { showCabs } from "../../Services/api";
-
-
 
 
 export const Cab = () =>{
 
     const [Cabs,setCabs] = useState([]);
 
-//     const showCabs = () => {
-//         Axios.get("http://localhost:3000/Cabs")
-//         .then((response)=>{
-//          setCabs(response.data)
-//          console.log(response)
-//          console.log(response.data)
-//         })
-// }
+    const showCabs = () => {
+        Axios.get("http://localhost:3000/Cabs")
+        .then((response)=>{
+         setCabs(response.data)
+         console.log(response)
+         console.log(response.data)
+        })
+}
 
     useEffect(()=>{
       showCabs()
