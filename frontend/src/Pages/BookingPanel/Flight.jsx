@@ -1,6 +1,7 @@
 import React, { useState , useEffect } from "react";
 import Axios from "axios";
 import {DetailsCard} from "../../Components/DetailsCard";
+import BookingButton from "../../Components/BookingButton";
 import Plane from "../../Assets/Plane.svg";
 
 export const Flight = () =>{
@@ -28,7 +29,7 @@ return<>
              company={value?.FlightComp}
              cost={value?.FlightCost}
              destination={value?.FlightDest}
-              ></DetailsCard>
+              />
             ))}
 </div>
    </>
