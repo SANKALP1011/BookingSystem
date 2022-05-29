@@ -17,8 +17,7 @@ export const Cab = () =>{
         })
 }
 
- 
-    useEffect(()=>{
+  useEffect(()=>{
       showCabs()
     },[]);
 
