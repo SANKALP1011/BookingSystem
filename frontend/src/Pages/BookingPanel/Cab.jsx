@@ -21,9 +21,6 @@ export const Cab = () =>{
       showCabs()
     },[]);
 
-const BookCab = () =>{
-  alert("hhkhkj")
-};
 
 return <>
    <div className="item-container">
