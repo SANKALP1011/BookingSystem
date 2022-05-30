@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import swal from "sweetalert";
 import DetailsCard from "../../Components/DetailsCard";
 import Car from "../../Assets/Car.svg";
 
